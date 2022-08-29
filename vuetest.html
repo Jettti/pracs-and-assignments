@@ -5,20 +5,20 @@
     </head>
 
     <body>
-    <div id = "app1">
-    <label for="name"> Yout Name </label>
-    <input type ="text" v-model = "message" placeholder="your name"/>
+    <div id = "#app1">
+    <label for="name"> your Name </label>
+    <input type ="text" v-model ="message" placeholder="your name"/>
     <br><br>
     Your input is: {{message}}
     <br><br>
-    <textarea area v-model="message" placeholder="you can type something here"></textarea>
-    <textarea area v-model="anothermessage" placeholder="you can type something here"></textarea>
+    <textarea area v-model= "message" placeholder="you can type something here"></textarea>
+    <textarea area v-model= "anothermessage" placeholder="you can type something here"></textarea>
     <br><br>
-    Your input is: {{another message}}
+    Your input is: {{anothermessage}}
 </div>
     <script>
-        varapp1 = new Vue({
-        el: "app1",
+        var app1 = new Vue({
+        el: "#app1",
         data: {
             message:'',
             anothermessage:'',
