@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id = "app">
+            <custom-article vbind:content = "datacontent"></custom-article>
+        </div>
+        <script>
+            new Vue({
+                el:"#app",
+                data: {
+                    datacontent: 'This component was made with the help od a data object in vue isntance and rendered using prop!'}
+            })
+
+            Vue.component('custom-article', {
+                props: ['content'],
+                template: <article> {{content}} </article>
+            })
+            
+        </script>
+    </body>
+</html>
