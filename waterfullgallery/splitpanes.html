@@ -1,0 +1,21 @@
+import { Splitpanes, Pane } from 'splitpanes'
+import 'splitpanes/dist/splitpanes.css'
+
+export default {
+  components: { Splitpanes, Pane },
+  ...
+}
+
+<head>
+  ...
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/splitpanes"></script>
+  <link href="https://unpkg.com/splitpanes/dist/splitpanes.css" rel="stylesheet">
+
+  <splitpanes class="default-theme">
+  <pane v-for="i in 3" :key="i">
+    <div>{{ i }}</div>
+  </pane>
+</splitpanes>
+
+</head>
