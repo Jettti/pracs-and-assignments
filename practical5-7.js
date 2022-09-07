@@ -46,6 +46,25 @@ var app5 = new Vue({
   }
 })
 
+var app6 = new Vue({
+  el: "#app-6",
+  data: {
+    userEntry: {
+      name: 'null'
+    }
+  },
+  computed: {
+    name() {
+      return this.userEntry.name;
+    }
+  },
+  watch: {
+    name(newVal, oldVal) {
+      document.getElementById("demo").innerHTML = "oldVal: " + oldVal + " , newVal:" + newVal;
+    }
+  }
+})
+
 //changing the apps message
 app2.message = 'you hovered over this on ' + new Date().toLocaleDateString();
 
