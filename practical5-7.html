@@ -18,7 +18,21 @@
                 to see my dynamically bound title!
                 </span>
             </div>
-        
+<br>
+            <div id = "app-3">
+                    <span v-if="seen"> Now you see me</span>
+            </div>
+
+            <div id = "app-4">
+                    <p>{{ message }}</p>
+                    <button v-on:click="reverseMessage"> Reverse the message</button>
+            </div>
+<br>
+            <div id = "app-5">
+           <p> original message: {{ message }}</p>
+           <p> computed reverse message: {{ reversedMessage }} </p>
+            </div>
+            
             <script src="practical5-7.js"></script>
         </body>
     <br></br>     
