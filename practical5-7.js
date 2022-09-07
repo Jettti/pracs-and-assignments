@@ -1,4 +1,11 @@
 
+//flex waterfall test
+import VueFlexWaterfall from 'vue-flex-waterfall';
+export default {
+  components:{
+    VueFlexWaterfall,
+  }
+}
 //declaring new apps in js
 var app = new Vue({
   el: '#app',
