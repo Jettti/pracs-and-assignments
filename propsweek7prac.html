@@ -7,18 +7,42 @@
         <div id = "app">
             <custom-article v-bind:content = "datacontent"></custom-article>
         </div>
+<br>
+        <div id="components-demo">
+            <button-counter></button-counter>
+            <button-counter></button-counter>
+            <button-counter></button-counter>
+        </div>
+    </body>
+
+
+
+
         <script>           
             Vue.component('custom-article', {
                 props: ['content'],
                 template: '<div> {{content}} </div>'
             })
+            
+            Vue.component('button-counter', {
+                data: function () {
+                return {
+                        count: 0
+                }},
+                    template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+            })
+            
 
-        new Vue({
+            new Vue({
                 el:"#app",
                 data: {
                     datacontent: 'This component was made with the help od a data object in vue isntance and rendered using prop!'}
             })
+
+            new Vue({ el: '#components-demo' })
             
+
+
         </script>
     </body>
 </html>
